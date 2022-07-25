@@ -43,7 +43,6 @@ class RestaurantServiceTest {
     @Test
     public void remove_restaurant_should_reduce_list_of_restaurants_size_by_1() throws restaurantNotFoundException {
         int initialNumberOfRestaurants = service.getRestaurants().size();
-        System.out.println("Initial size:"+ initialNumberOfRestaurants);
         service.removeRestaurant("Amelie's cafe");
         assertEquals(initialNumberOfRestaurants-1, service.getRestaurants().size());
     }
